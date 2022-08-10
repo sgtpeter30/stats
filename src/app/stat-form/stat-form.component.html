@@ -1,8 +1,49 @@
-<div class="p-grid p-fluid">
-  <div class="p-field p-col-12 p-md-3">
-    <label for="horizontal">Horizontal with Step</label>
-    <p-inputNumber [(ngModel)]="value18" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="0.1"
-    incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus">
-    </p-inputNumber>
-  </div>
+<div class="card pizza">
+  <form [formGroup]="pizzaForm" name="pizzaForm" class="flex flex-wrap p-fluid">
+    <div class="dataPicker col-12">
+      <label>DATA: </label>
+      <p-calendar class="col-12" formControlName="date" dateFormat="dd.mm" dataType="string" (onSelect)="pickedDate(pizzaForm.controls['date'].value)"></p-calendar>
+    </div>
+    <div class="pizzaArray col-12" formArrayName="pizzaArray" >
+      <h2>Pizze: </h2>
+      <div class="flex flex-wrap col-2" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
+        <div class="p-field flex flex-wrap pizza_wrapper" [formGroupName]="i">
+          <label class="col-12" for="horizontal">{{type.controls.pizzaName.value}}</label>
+          <p-inputNumber
+            class="col-1 pizzaInput"
+            formControlName="pizzaQuantity"
+            buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal">
+          </p-inputNumber>
+          <div class="pizza_button_wrapper">
+            <button pButton class="pi pi-minus pizza_button half half_minus" type="button" (click)="halfPizzaMinus(type)"></button>
+            <button pButton class="p-button-danger pi pi-minus pizza_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
+            <button pButton class="pi pi-plus pizza_button half half_plus" type="button" (click)="halfPizzaPlus(type)"></button>
+            <button pButton class="p-button-success pi pi-plus pizza_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <h2>Zestawy</h2>
+    </div>
+    <ng-container formArrayName="kitsArray" >
+      <div class="flex flex-wrap col-2" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
+        <div class="p-field flex flex-wrap" [formGroupName]="i">
+          <label class="col-12" for="horizontal">{{type.controls.kitName.value}}</label>
+          <p-inputNumber
+            class="col-6"
+            formControlName="kitQuantity"
+            [showButtons]="true"
+            buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+            incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+            decrementButtonClass="p-button-danger" decrementButtonIcon="pi pi-minus">
+          </p-inputNumber>
+        </div>
+      </div>
+    </ng-container>
+
+
+    <button pButton type="button" label="Submit" (click)="submitForm()"></button>
+  </form>
 </div>
