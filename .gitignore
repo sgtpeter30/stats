@@ -43,3 +43,6 @@ Thumbs.db
 
 # others
 /backend
+src/assets/archiveFile.json
+src/assets/backup.json
+src/assets/archiveFile.json

@@ -1,0 +1,26 @@
+<p-table [value]="statistics" responsiveLayout="scroll" dataKey="id" class="statistics_table">
+	<ng-template pTemplate="header">
+		<tr>
+			<th>Dzień</th>
+			<th>ilość pizz</th>
+			<th>ilość zestawów</th>
+			<th>Detale</th>
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="body" let-data let-expanded="expanded">
+		<tr class="{{data.id}}">
+			<td>{{data.date}}</td>
+			<td>{{data.pizzaSum}}</td>
+			<td>{{data.kitSum}}</td>
+			<td>
+				<button type="button" pButton pRipple [pRowToggler]="data" class="p-button-primary" >Szczegóły</button>
+			</td>
+		</tr>
+
+	</ng-template>
+	<ng-template pTemplate="rowexpansion" let-data>
+		<tr class="{{data.id}}">
+			<app-day-chart [data]="data" style="width: 100%;"></app-day-chart>
+		</tr>
+	</ng-template>
+</p-table>

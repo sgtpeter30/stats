@@ -1,0 +1,12 @@
+<a pButton type="button" class="p-button-info" href="/">Wróć do formularza</a>
+<p-tabView>
+  <p-tabPanel header="Tabela">
+    <app-stat-table [statistics]="statistics"></app-stat-table>
+  </p-tabPanel>
+  <p-tabPanel header="Wykres">
+    <app-stat-bar [statistics]="statistics"></app-stat-bar>
+  </p-tabPanel>
+  <p-tabPanel header="Header 3">
+    Content 3
+  </p-tabPanel>
+</p-tabView>

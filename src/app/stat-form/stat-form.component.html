@@ -1,25 +1,33 @@
 <div class="card pizza">
   <form [formGroup]="pizzaForm" name="pizzaForm" class="flex flex-wrap p-fluid">
     <div class="dataPicker col-12">
-      <label>DATA: </label>
-      <p-calendar class="col-12" formControlName="date" dateFormat="dd.mm" dataType="string" (onSelect)="pickedDate(pizzaForm.controls['date'].value)"></p-calendar>
+      <div class="wrapper">
+        <label>DATA: </label>
+        <p-calendar class="col-12" formControlName="date" dateFormat="dd.mm" dataType="string" firstDayOfWeek="1" (onSelect)="pickedDate(pizzaForm.controls['date'].value)"></p-calendar>
+      </div>
+      <a href="dashboards" class="btn p-button">STATYSTYKI</a>
+      <div class="valueSum">
+        <span class="pizzaSum">Suma pizz: {{pizzaSum}}</span>
+        <span class="kitSum">Suma zestawów: {{kitSum}}</span>
+      </div>
     </div>
+    <h2>Pizze: </h2>
     <div class="pizzaArray col-12" formArrayName="pizzaArray" >
-      <h2>Pizze: </h2>
-      <div class="flex flex-wrap col-2" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
-        <div class="p-field flex flex-wrap pizza_wrapper" [formGroupName]="i">
-          <label class="col-12" for="horizontal">{{type.controls.pizzaName.value}}</label>
+      <div class="flex flex-wrap col-4" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
+        <div class="p-field flex pizza_wrapper" [formGroupName]="i">
+          <label class="pizza_name" for="horizontal">{{type.controls.pizzaName.value}}</label>
+          
+          <div class="pizza_button_wrapper">
+            <button pButton class="pi pi-plus pizza_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
+            <button pButton class="pi pi-plus pizza_button half half_plus" type="button" (click)="halfPizzaPlus(type)"></button>
+            <button pButton class="pi pi-minus pizza_button half half_minus" type="button" (click)="halfPizzaMinus(type)"></button>
+            <button pButton class="pi pi-minus pizza_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
+          </div>
           <p-inputNumber
             class="col-1 pizzaInput"
             formControlName="pizzaQuantity"
             buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal">
           </p-inputNumber>
-          <div class="pizza_button_wrapper">
-            <button pButton class="pi pi-minus pizza_button half half_minus" type="button" (click)="halfPizzaMinus(type)"></button>
-            <button pButton class="p-button-danger pi pi-minus pizza_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
-            <button pButton class="pi pi-plus pizza_button half half_plus" type="button" (click)="halfPizzaPlus(type)"></button>
-            <button pButton class="p-button-success pi pi-plus pizza_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
-          </div>
         </div>
       </div>
     </div>
@@ -27,21 +35,23 @@
     <div class="col-12">
       <h2>Zestawy</h2>
     </div>
-    <ng-container formArrayName="kitsArray" >
-      <div class="flex flex-wrap col-2" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
-        <div class="p-field flex flex-wrap" [formGroupName]="i">
-          <label class="col-12" for="horizontal">{{type.controls.kitName.value}}</label>
+    <div formArrayName="kitsArray" class="kitsArray" >
+      <div class="flex flex-wrap col-3" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
+        <div class="p-field flex kits_wrapper" [formGroupName]="i">
+          <label class="kits_name" for="horizontal">{{type.controls.kitName.value}}</label>
+          
+          <div class="kits_button_wrapper">
+            <button pButton class="pi pi-plus kits_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
+            <button pButton class="pi pi-minus kits_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
+          </div>
           <p-inputNumber
-            class="col-6"
+            class="col-1 kitsInput"
             formControlName="kitQuantity"
-            [showButtons]="true"
-            buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
-            incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
-            decrementButtonClass="p-button-danger" decrementButtonIcon="pi pi-minus">
+            buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal">
           </p-inputNumber>
         </div>
       </div>
-    </ng-container>
+    </div>
 
 
     <button pButton type="button" label="Submit" (click)="submitForm()"></button>

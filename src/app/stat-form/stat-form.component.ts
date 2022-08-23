@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
-import { FormGroup, FormControl, FormBuilder, Form, FormArray, RequiredValidator, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pizzaList, kitsList } from "../../assets/pizzaList";
-import { fileUsage } from "./file-usage"
 import { HttpClient } from '@angular/common/http';
 
 
@@ -14,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
 export class StatFormComponent implements OnInit {
 
   pizzaBaseData = pizzaList;
+  pizzaSum: number = 0;
+  kitSum: number = 0;
 
 
   pizzaForm!: FormGroup;
@@ -53,9 +53,6 @@ export class StatFormComponent implements OnInit {
 
   // submit
   submitForm = ()=>{
-    console.log(this.pizzaForm.valid);
-    console.log("sad")
-    console.log(this.pizzaForm.value);
     if (this.pizzaForm.valid) {
       const formValue = this.pizzaForm.value
       let sendData = this.http.post('http://localhost:3000/2022', formValue);
@@ -135,17 +132,33 @@ export class StatFormComponent implements OnInit {
   }
 
   singleClickPlus = (type)=>{
-    type.setValue({
-      pizzaName: type.controls.pizzaName.value,
-      pizzaQuantity: type.controls.pizzaQuantity.value+1
-    })
-  }
-  singleClickMinus = (type)=>{
-    if(type.controls.pizzaQuantity.value !== 0){
+    if(type.controls.pizzaName){
       type.setValue({
         pizzaName: type.controls.pizzaName.value,
-        pizzaQuantity: type.controls.pizzaQuantity.value-1
+        pizzaQuantity: type.controls.pizzaQuantity.value+1
       })
+    }else{
+      type.setValue({
+        kitName: type.controls.kitName.value,
+        kitQuantity: type.controls.kitQuantity.value+1
+      })
+    }
+  }
+  singleClickMinus = (type)=>{
+    if(type.controls.pizzaQuantity){
+      if(type.controls.pizzaQuantity.value !== 0){
+        type.setValue({
+          pizzaName: type.controls.pizzaName.value,
+          pizzaQuantity: type.controls.pizzaQuantity.value-1
+        })
+      }
+    }else{
+      if(type.controls.kitQuantity.value !== 0){
+        type.setValue({
+          kitName: type.controls.kitName.value,
+          kitQuantity: type.controls.kitQuantity.value-1
+        })
+      }
     }
   }
   ngOnInit(): void {
@@ -155,5 +168,14 @@ export class StatFormComponent implements OnInit {
     req.subscribe( res => {
       console.log(res);
     });
-  }
+
+    this.pizzaForm.valueChanges.subscribe(value => {
+      this.pizzaSum = value.pizzaArray.reduce((accumulator, object) => {
+        return accumulator + object.pizzaQuantity;
+      }, 0);
+      this.kitSum = value.kitsArray.reduce((accumulator, object) => {
+        return accumulator + object.kitQuantity;
+      }, 0);
+ });
+  };
 }

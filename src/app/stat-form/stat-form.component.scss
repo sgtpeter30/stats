@@ -6,30 +6,80 @@
   .dataPicker{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    .wrapper{
+      display: flex;
+      align-items: center;
+    }
     p-calendar{
       width: 150px;
     }
   }
+  .btn{
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .valueSum{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    span{
+      width: 100%;
+      display: flex;
+    }
+  }
   h2{
+    width: 100%;
     margin: 0;
   }
   .pizzaArray {
     display: flex;
     flex-wrap: wrap;
-
-    h2{
-      width: 100%;
-    }
+    flex-direction: column;
+    height: 580px;
     p-inputnumber {
       width: calc(100% - 60px);
-      width: 30%;
+      width: 15%;
     }
-    .pizza_wrapper{
-      margin-right: 15px;
+    &>div{
+      padding: 0 !important;
     }
-    .pizza_button {
+  }
+  .kitsArray{
+    display: flex;
+    flex-wrap: wrap;
+    p-inputnumber {
+      width: calc(100% - 60px);
+      width: 15%;
+    }
+    &>div{
+      padding: 0 !important;
+    }
+  }
+  .pizza, .kits{
+    &_wrapper{
+      margin-right: 0;
+      justify-content: flex-start;
+      justify-items: flex-start;
+      align-items: center;
+      height: 70px;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        right: 20px;
+        background: var(--gray-600);
+      }
+    }
+    &_name{
+      width: 150px;
+    }
+    &_button {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,6 +92,10 @@
       &.single{
         width: 50px;
         height: 50px;
+        &_plus{
+          // background: black;
+          // border-color: black;
+        }
       }
       &.half{
         width: 30px;
@@ -52,9 +106,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70%;
+        width: 50%;
       }
     }
   }
+  .kits_button{
+    &_wrapper{
+      width: 30%;
+    }
+  }
 }
-
