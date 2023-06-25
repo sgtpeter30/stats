@@ -20,17 +20,21 @@ export class DashboardsComponent implements OnInit {
     this.act.data.subscribe(res => {
       console.log(res);
       console.log(res['statistics']);
-
       this.statistics = res['statistics'];
-      this.statistics.forEach(element => {
-        if (element.pizzaArray) {
-          element.pizzaSum = element.pizzaArray.reduce((accumulator, object) => {
-            return accumulator + object.pizzaQuantity;
-          }, 0);
-          element.kitSum = element.kitsArray.reduce((accumulator, object) => {
-            return accumulator + object.kitQuantity;
-          }, 0);
-        }
+      this.statistics.forEach(year =>{
+        console.log("year");
+        console.log(year);
+
+        year.value.forEach(element => {
+          if (element.pizzaArray) {
+            element.pizzaSum = element.pizzaArray.reduce((accumulator, object) => {
+              return accumulator + object.pizzaQuantity;
+            }, 0);
+            element.kitSum = element.kitsArray.reduce((accumulator, object) => {
+              return accumulator + object.kitQuantity;
+            }, 0);
+          }
+        })
       });
 
     });

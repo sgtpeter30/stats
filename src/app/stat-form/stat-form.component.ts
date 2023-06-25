@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pizzaList, kitsList } from "../../assets/pizzaList";
 import { HttpClient } from '@angular/common/http';
+import { dialogflow } from 'googleapis/build/src/apis/dialogflow';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class StatFormComponent implements OnInit {
   pizzaBaseData = pizzaList;
   pizzaSum: number = 0;
   kitSum: number = 0;
+  currentBase = {};
 
 
   pizzaForm!: FormGroup;
@@ -54,9 +56,26 @@ export class StatFormComponent implements OnInit {
   // submit
   submitForm = ()=>{
     if (this.pizzaForm.valid) {
-      const formValue = this.pizzaForm.value
-      let sendData = this.http.post('http://localhost:3000/2022', formValue);
-      sendData.subscribe();
+      const formValue = {
+        // zmienić potem na faktyczny rok wybrany z daty!
+        year: 2023,
+        value: [...this.currentBase as any, this.pizzaForm.value]
+      }
+      // let sendData = this.http.post('http://localhost:3500/stats?year=2023', formValue);
+      // sendData.subscribe(response =>{
+      //   console.log(response);
+      // });
+
+      this.http.put('http://localhost:3500/stats/2023', formValue).subscribe({
+        next: (response) => {
+          alert('Wysłano')
+
+        }, error: (err) => {
+          console.log(err)
+          alert(err.message)
+        }
+      });
+
     }else{
       alert('Wybierz dzień!')
     }
@@ -164,9 +183,10 @@ export class StatFormComponent implements OnInit {
   ngOnInit(): void {
     // console.log("pizzaList");
     // console.log(pizzaList);
-    let req = this.http.get('http://localhost:3000/2022');
-    req.subscribe( res => {
-      console.log(res);
+
+    this.http.get('http://localhost:3500/stats/2023').subscribe((res: any)=> {
+      this.currentBase = res.value
+      console.log(res)
     });
 
     this.pizzaForm.valueChanges.subscribe(value => {

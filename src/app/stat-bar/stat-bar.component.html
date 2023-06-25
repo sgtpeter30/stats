@@ -1,3 +1,4 @@
-<div class="card">
+<div class="card" *ngFor="let barData of barList; let i = index">
+  <h2>{{statistics[i].year}}</h2>
   <p-chart type="bar" [data]="barData" ></p-chart>
 </div>

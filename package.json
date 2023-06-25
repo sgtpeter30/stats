@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "serve": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "nodemon backend/app.js",
-    "localFile": "json-server --watch ./src/assets/archiveFile.json"
+    "localFile": "json-server --port 3500 -w ./src/assets/archiveFile.json"
   },
   "private": true,
   "dependencies": {
