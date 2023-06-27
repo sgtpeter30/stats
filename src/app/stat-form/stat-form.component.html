@@ -16,7 +16,7 @@
       <div class="flex flex-wrap col-4" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
         <div class="p-field flex pizza_wrapper" [formGroupName]="i">
           <label class="pizza_name" for="horizontal">{{type.controls.pizzaName.value}}</label>
-          
+
           <div class="pizza_button_wrapper">
             <button pButton class="pi pi-plus pizza_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
             <button pButton class="pi pi-plus pizza_button half half_plus" type="button" (click)="halfPizzaPlus(type)"></button>
@@ -39,7 +39,7 @@
       <div class="flex flex-wrap col-3" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
         <div class="p-field flex kits_wrapper" [formGroupName]="i">
           <label class="kits_name" for="horizontal">{{type.controls.kitName.value}}</label>
-          
+
           <div class="kits_button_wrapper">
             <button pButton class="pi pi-plus kits_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
             <button pButton class="pi pi-minus kits_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
@@ -47,6 +47,27 @@
           <p-inputNumber
             class="col-1 kitsInput"
             formControlName="kitQuantity"
+            buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal">
+          </p-inputNumber>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <h2>Dodatkowe</h2>
+    </div>
+    <div formArrayName="othersArray" class="othersArray kitsArray" >
+      <div class="flex flex-wrap col-3" *ngFor="let type of pizzaForm.get('othersArray')['controls']; let i=index">
+        <div class="p-field flex others_wrapper kits_wrapper" [formGroupName]="i">
+          <label class="others_name kits_name" for="horizontal">{{type.controls.othersName.value}}</label>
+
+          <div class="others_button_wrapper kits_button_wrapper">
+            <button pButton class="pi pi-plus others_button kits_button single single_plus" type="button" (click)="singleClickPlus(type)"></button>
+            <button pButton class="pi pi-minus others_button kits_button single single_minus" type="button" (click)="singleClickMinus(type)"></button>
+          </div>
+          <p-inputNumber
+            class="col-1 othersInput kitsInput"
+            formControlName="othersQuantity"
             buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal">
           </p-inputNumber>
         </div>

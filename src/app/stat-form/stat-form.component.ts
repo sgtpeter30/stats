@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { pizzaList, kitsList } from "../../assets/pizzaList";
+import { pizzaList, kitsList, otherList } from "../../assets/pizzaList";
 import { HttpClient } from '@angular/common/http';
 import { dialogflow } from 'googleapis/build/src/apis/dialogflow';
 
@@ -15,6 +15,8 @@ export class StatFormComponent implements OnInit {
   pizzaBaseData = pizzaList;
   pizzaSum: number = 0;
   kitSum: number = 0;
+  others: number = 0;
+
   currentBase = {};
 
 
@@ -26,6 +28,8 @@ export class StatFormComponent implements OnInit {
   ) {
     const preparedPizzas = [];
     const preparedKits = [];
+    const preparedOthers = [];
+
     this.pizzaBaseData.forEach(element => {
       preparedPizzas.push(
         this.fb.group({
@@ -42,6 +46,14 @@ export class StatFormComponent implements OnInit {
         })
       )
     });
+    otherList.forEach(element => {
+      preparedOthers.push(
+        this.fb.group({
+          othersName: this.fb.control(element.name),
+          othersQuantity: this.fb.control(element.value)
+        })
+      )
+    })
 
     // inicjalizacja formularza
     this.pizzaForm = this.fb.group({
@@ -49,7 +61,8 @@ export class StatFormComponent implements OnInit {
       halvesQuantity: this.fb.control(0),
       halves: this.fb.array([]),
       pizzaArray: this.fb.array(preparedPizzas),
-      kitsArray: this.fb.array(preparedKits)
+      kitsArray: this.fb.array(preparedKits),
+      othersArray: this.fb.array(preparedOthers)
     })
   }
 
@@ -156,7 +169,14 @@ export class StatFormComponent implements OnInit {
         pizzaName: type.controls.pizzaName.value,
         pizzaQuantity: type.controls.pizzaQuantity.value+1
       })
-    }else{
+    }
+    else if(type.controls.othersName){
+      type.setValue({
+        othersName: type.controls.othersName.value,
+        othersQuantity: type.controls.othersQuantity.value+1
+      })
+    }
+    else{
       type.setValue({
         kitName: type.controls.kitName.value,
         kitQuantity: type.controls.kitQuantity.value+1
@@ -171,7 +191,16 @@ export class StatFormComponent implements OnInit {
           pizzaQuantity: type.controls.pizzaQuantity.value-1
         })
       }
-    }else{
+    }
+    else if(type.controls.othersName){
+      if(type.controls.othersQuantity.value !== 0){
+        type.setValue({
+          othersName: type.controls.othersName.value,
+          othersQuantity: type.controls.othersQuantity.value-1
+        })
+      }
+    }
+    else{
       if(type.controls.kitQuantity.value !== 0){
         type.setValue({
           kitName: type.controls.kitName.value,
@@ -195,6 +224,9 @@ export class StatFormComponent implements OnInit {
       }, 0);
       this.kitSum = value.kitsArray.reduce((accumulator, object) => {
         return accumulator + object.kitQuantity;
+      }, 0);
+      this.others = value.kitsArray.reduce((accumulator, object) => {
+        return accumulator + object.othersQuantity;
       }, 0);
  });
   };

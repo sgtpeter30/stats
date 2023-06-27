@@ -182,3 +182,58 @@ export const kitsList = [
     value: 0
   },
 ]
+
+export const otherList = [
+  {
+    name: 'Pudełko do pizzy',
+    value: 0
+  },
+  {
+    name: 'Napój zimny',
+    value: 0
+  },
+  {
+    name: 'Sok',
+    value: 0
+  },
+  {
+    name: 'Herbata',
+    value: 0
+  },
+  {
+    name: 'Kawa czarna',
+    value: 0
+  },
+  {
+    name: 'Kawa biała',
+    value: 0
+  },
+  {
+    name: 'Kawa cappucino',
+    value: 0
+  },
+  {
+    name: 'Kawa latte machiatto',
+    value: 0
+  },
+  {
+    name: 'Tyskie duże',
+    value: 0
+  },
+  {
+    name: 'Tyskie małe',
+    value: 0
+  },
+  {
+    name: 'Lech duży',
+    value: 0
+  },
+  {
+    name: 'Lech mały',
+    value: 0
+  },
+  {
+    name: 'Piwo w puszce',
+    value: 0
+  }
+]

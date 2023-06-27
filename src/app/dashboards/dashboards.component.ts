@@ -30,9 +30,13 @@ export class DashboardsComponent implements OnInit {
             element.pizzaSum = element.pizzaArray.reduce((accumulator, object) => {
               return accumulator + object.pizzaQuantity;
             }, 0);
-            element.kitSum = element.kitsArray.reduce((accumulator, object) => {
+            element.kitSum = element?.kitsArray.reduce((accumulator, object) => {
               return accumulator + object.kitQuantity;
             }, 0);
+            element.othersSum = element?.othersArray?.reduce((accumulator, object) => {
+              return accumulator + object.othersQuantity;
+            }, 0);
+            element.boxNumber = element?.othersArray?.find(element => element.othersName === "Pudełko do pizzy").othersQuantity
           }
         })
       });

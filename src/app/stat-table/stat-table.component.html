@@ -6,6 +6,8 @@
         <th>Dzień</th>
         <th>ilość pizz</th>
         <th>ilość zestawów</th>
+        <th>ilość pudełek</th>
+        <th>ilość dodatków</th>
         <th>Detale</th>
       </tr>
     </ng-template>
@@ -14,6 +16,8 @@
         <td>{{data.date}}</td>
         <td>{{data.pizzaSum}}</td>
         <td>{{data.kitSum}}</td>
+        <td>{{data.boxNumber}}</td>
+        <td>{{data.othersSum}}</td>
         <td>
           <button type="button" pButton pRipple [pRowToggler]="data" class="p-button-primary" >Szczegóły</button>
         </td>
