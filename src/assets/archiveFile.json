@@ -5032,6 +5032,1469 @@
               "othersQuantity": 0
             }
           ]
+        },
+        {
+          "date": "02.07",
+          "halvesQuantity": 5,
+          "halves": [
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Własna"
+            },
+            {
+              "firstHalf": "Capircciosa",
+              "secondHalf": "Luca"
+            },
+            {
+              "firstHalf": "Grecka",
+              "secondHalf": "Feta"
+            },
+            {
+              "firstHalf": "Mozaico",
+              "secondHalf": "Piekielna"
+            },
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Capircciosa"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 11
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 6
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 10
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 8.5
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 3
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 6
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 4
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 0
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 18
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 13
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 6
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 8
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 0
+            }
+          ]
+        },
+        {
+          "date": "03.07",
+          "halvesQuantity": 0,
+          "halves": [],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 4
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 9
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 2
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 3
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 3
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 9
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 2
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 2
+            }
+          ]
+        },
+        {
+          "date": "04.07",
+          "halvesQuantity": 1,
+          "halves": [
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Capircciosa"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 8.5
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 4.5
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 2
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 5
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 3
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 3
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 3
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 7
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 6
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 0
+            }
+          ]
+        },
+        {
+          "date": "05.07",
+          "halvesQuantity": 2,
+          "halves": [
+            {
+              "firstHalf": "Capircciosa",
+              "secondHalf": "Własna"
+            },
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Mafia"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 4.5
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 7.5
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 4
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 6
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 0.5
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 4
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 3
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 2
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 9
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 7
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 2
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 4
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 1
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 2
+            }
+          ]
+        },
+        {
+          "date": "06.07",
+          "halvesQuantity": 4,
+          "halves": [
+            {
+              "firstHalf": "Farmerska",
+              "secondHalf": "Margerita"
+            },
+            {
+              "firstHalf": "Capircciosa",
+              "secondHalf": "Salami"
+            },
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Farmerska"
+            },
+            {
+              "firstHalf": "Funghi",
+              "secondHalf": "Capircciosa"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 6
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 0
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 6
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 1
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 7
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 7
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 2
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 2
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 2
+            }
+          ]
+        },
+        {
+          "date": "07.07",
+          "halvesQuantity": 6,
+          "halves": [
+            {
+              "firstHalf": "Feta",
+              "secondHalf": "Capircciosa"
+            },
+            {
+              "firstHalf": "Italiana",
+              "secondHalf": "Piekielna"
+            },
+            {
+              "firstHalf": "Capircciosa",
+              "secondHalf": "Vesuvio"
+            },
+            {
+              "firstHalf": "Własna",
+              "secondHalf": "Vegetariana"
+            },
+            {
+              "firstHalf": "Vesuvio",
+              "secondHalf": "Capircciosa"
+            },
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Mafia"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 7.5
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 8.5
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 5.5
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 4
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 8
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 1
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 10
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 10
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 2
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 14
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 3
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 11
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 3
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 0
+            }
+          ]
+        },
+        {
+          "date": "08.07",
+          "halvesQuantity": 5,
+          "halves": [
+            {
+              "firstHalf": "Mafia",
+              "secondHalf": "Serowa"
+            },
+            {
+              "firstHalf": "Farmerska",
+              "secondHalf": "Capircciosa"
+            },
+            {
+              "firstHalf": "Margerita",
+              "secondHalf": "Hawajska"
+            },
+            {
+              "firstHalf": "Feta",
+              "secondHalf": "Margerita"
+            },
+            {
+              "firstHalf": "Luca",
+              "secondHalf": "Farmerska"
+            }
+          ],
+          "pizzaArray": [
+            {
+              "pizzaName": "Margerita",
+              "pizzaQuantity": 7
+            },
+            {
+              "pizzaName": "Americana",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Capircciosa",
+              "pizzaQuantity": 9.5
+            },
+            {
+              "pizzaName": "Carato",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Fantastica",
+              "pizzaQuantity": 4
+            },
+            {
+              "pizzaName": "Farmerska",
+              "pizzaQuantity": 3
+            },
+            {
+              "pizzaName": "Feta",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Funghi",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Grecka",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Hawajska",
+              "pizzaQuantity": 3.5
+            },
+            {
+              "pizzaName": "Italiana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Luca",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Mafia",
+              "pizzaQuantity": 0.5
+            },
+            {
+              "pizzaName": "Mexicana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Mozaico",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Opera",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Pescatore",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Piekielna",
+              "pizzaQuantity": 1
+            },
+            {
+              "pizzaName": "Salami",
+              "pizzaQuantity": 10
+            },
+            {
+              "pizzaName": "Serowa",
+              "pizzaQuantity": 1.5
+            },
+            {
+              "pizzaName": "Smakosza",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vegetariana",
+              "pizzaQuantity": 0
+            },
+            {
+              "pizzaName": "Vesuvio",
+              "pizzaQuantity": 2
+            },
+            {
+              "pizzaName": "Własna",
+              "pizzaQuantity": 6
+            }
+          ],
+          "kitsArray": [
+            {
+              "kitName": "Zestaw nuggetsy",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Zestaw streepsy",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Zestaw kotlet",
+              "kitQuantity": 2
+            },
+            {
+              "kitName": "nuggetsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "streepsy",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "frytki",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Hot dog",
+              "kitQuantity": 0
+            },
+            {
+              "kitName": "Hot dog francuski",
+              "kitQuantity": 1
+            },
+            {
+              "kitName": "Hamburger",
+              "kitQuantity": 1
+            }
+          ],
+          "othersArray": [
+            {
+              "othersName": "Pudełko do pizzy",
+              "othersQuantity": 20
+            },
+            {
+              "othersName": "Napój zimny",
+              "othersQuantity": 7
+            },
+            {
+              "othersName": "Sok",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Herbata",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa czarna",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa biała",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa cappucino",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Kawa latte machiatto",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Tyskie duże",
+              "othersQuantity": 4
+            },
+            {
+              "othersName": "Tyskie małe",
+              "othersQuantity": 5
+            },
+            {
+              "othersName": "Lech duży",
+              "othersQuantity": 4
+            },
+            {
+              "othersName": "Lech mały",
+              "othersQuantity": 0
+            },
+            {
+              "othersName": "Piwo w puszce",
+              "othersQuantity": 2
+            }
+          ]
         }
       ],
       "id": 2023

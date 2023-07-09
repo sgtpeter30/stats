@@ -1,6 +1,6 @@
 <div *ngFor="let year of statistics">
   <h2>{{year.year}}</h2>
-  <p-table [value]="year.value" responsiveLayout="scroll" dataKey="id" class="statistics_table">
+  <p-table [value]="year.value" responsiveLayout="scroll" dataKey="id" class="statistics_table" [scrollable]="true" scrollHeight="300px">
     <ng-template pTemplate="header">
       <tr>
         <th>Dzień</th>
