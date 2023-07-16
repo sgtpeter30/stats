@@ -126,9 +126,11 @@ export class StatFormComponent implements OnInit {
     this.halvesValue++;
     switch(this.halvesValue){
       case 1:
+        console.log(type.controls.pizzaName.value)
         this.halfPizza.firstHalf = type.controls.pizzaName.value;
         break;
       case 2:
+        console.log(type.controls.pizzaName.value)
         this.halvesValue = 0;
         this.pizzaForm.controls['halvesQuantity'].setValue(this.pizzaForm.value.halvesQuantity + 1);
         this.halfPizza.secondHalf = type.controls.pizzaName.value;
@@ -165,18 +167,21 @@ export class StatFormComponent implements OnInit {
 
   singleClickPlus = (type)=>{
     if(type.controls.pizzaName){
+      console.log(type.controls.pizzaName.value);
       type.setValue({
         pizzaName: type.controls.pizzaName.value,
         pizzaQuantity: type.controls.pizzaQuantity.value+1
       })
     }
     else if(type.controls.othersName){
+      console.log(type.controls.othersName.value)
       type.setValue({
         othersName: type.controls.othersName.value,
         othersQuantity: type.controls.othersQuantity.value+1
       })
     }
     else{
+      console.log(type.controls.kitName.value)
       type.setValue({
         kitName: type.controls.kitName.value,
         kitQuantity: type.controls.kitQuantity.value+1
