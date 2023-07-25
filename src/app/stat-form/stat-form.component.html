@@ -12,8 +12,8 @@
       </div>
     </div>
     <h2>Pizze: </h2>
-    <div class="pizzaArray col-12" formArrayName="pizzaArray" >
-      <div class="flex flex-wrap col-4" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
+    <div class="pizzaArray col-6" formArrayName="pizzaArray" >
+      <div class="flex flex-wrap" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
         <div class="p-field flex pizza_wrapper" [formGroupName]="i">
           <label class="pizza_name" for="horizontal">{{type.controls.pizzaName.value}}</label>
 
@@ -31,12 +31,12 @@
         </div>
       </div>
     </div>
-
-    <div class="col-12">
+    
+    <!-- <div class="col-6">
       <h2>Zestawy</h2>
-    </div>
+    </div> -->
     <div formArrayName="kitsArray" class="kitsArray" >
-      <div class="flex flex-wrap col-3" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
+      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
         <div class="p-field flex kits_wrapper" [formGroupName]="i">
           <label class="kits_name" for="horizontal">{{type.controls.kitName.value}}</label>
 
@@ -53,11 +53,11 @@
       </div>
     </div>
 
-    <div class="col-12">
+    <!-- <div class="col-6">
       <h2>Dodatkowe</h2>
-    </div>
+    </div> -->
     <div formArrayName="othersArray" class="othersArray kitsArray" >
-      <div class="flex flex-wrap col-3" *ngFor="let type of pizzaForm.get('othersArray')['controls']; let i=index">
+      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('othersArray')['controls']; let i=index">
         <div class="p-field flex others_wrapper kits_wrapper" [formGroupName]="i">
           <label class="others_name kits_name" for="horizontal">{{type.controls.othersName.value}}</label>
 
@@ -75,6 +75,6 @@
     </div>
 
 
-    <button pButton type="button" label="Submit" (click)="submitForm()"></button>
+    <button pButton type="button" label="Submit" (click)="submitForm()" class="submitButton"></button>
   </form>
 </div>

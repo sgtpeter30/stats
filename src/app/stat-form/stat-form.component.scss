@@ -1,7 +1,7 @@
 .pizza{
   label{
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    // text-transform: uppercase;
   }
   .dataPicker{
     display: flex;
@@ -34,15 +34,16 @@
   h2{
     width: 100%;
     margin: 0;
+    display: none;
   }
   .pizzaArray {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 580px;
+    height: 750px;
     p-inputnumber {
-      width: calc(100% - 60px);
-      width: 15%;
+      width: calc(100% - 30px);
+      width: 60px;
     }
     &>div{
       padding: 0 !important;
@@ -51,9 +52,11 @@
   .kitsArray{
     display: flex;
     flex-wrap: wrap;
+    width: 25%;
+    height: 25px;
     p-inputnumber {
       width: calc(100% - 60px);
-      width: 15%;
+      width: 60px;
     }
     &>div{
       padding: 0 !important;
@@ -61,23 +64,24 @@
   }
   .pizza, .kits{
     &_wrapper{
-      margin-right: 0;
-      justify-content: flex-start;
-      justify-items: flex-start;
+      margin-right: 10px;
+      margin-left: 10px;
+      justify-content: center;
       align-items: center;
-      height: 70px;
+      height: 60px;
       position: relative;
+      width: 100%;
       &:before{
         content: '';
         position: absolute;
         width: 1px;
         height: 100%;
-        right: 20px;
+        right: 0px;
         background: var(--gray-600);
       }
     }
     &_name{
-      width: 150px;
+      width: 130px;
     }
     &_button {
       display: flex;
@@ -116,6 +120,16 @@
     }
   }
   .othersArray{
-    width: 100%;
+    width: 25%;
+  }
+  .submitButton{
+    // background-color: gray;
+    position: fixed;
+    height: 50px;
+    width: 50%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
   }
 }
