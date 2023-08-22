@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pizzaList, kitsList, otherList } from "../../assets/pizzaList";
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +8,8 @@ import { dialogflow } from 'googleapis/build/src/apis/dialogflow';
 @Component({
   selector: 'app-stat-form',
   templateUrl: './stat-form.component.html',
-  styleUrls: ['./stat-form.component.scss']
+  styleUrls: ['./stat-form.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class StatFormComponent implements OnInit {
 
@@ -124,13 +125,18 @@ export class StatFormComponent implements OnInit {
   halfPizzaPlus = (type)=>{
     console.log(this.halvesValue);
     this.halvesValue++;
+    let historyItem
     switch(this.halvesValue){
       case 1:
-        console.log(type.controls.pizzaName.value)
+        historyItem = `+ 1 połówka: ${type.controls.pizzaName.value}`;
+        this.addToHistory(historyItem)
+
         this.halfPizza.firstHalf = type.controls.pizzaName.value;
         break;
       case 2:
-        console.log(type.controls.pizzaName.value)
+        historyItem = `+ 2 połówka: ${type.controls.pizzaName.value}`;
+        this.addToHistory(historyItem)
+
         this.halvesValue = 0;
         this.pizzaForm.controls['halvesQuantity'].setValue(this.pizzaForm.value.halvesQuantity + 1);
         this.halfPizza.secondHalf = type.controls.pizzaName.value;
@@ -158,6 +164,8 @@ export class StatFormComponent implements OnInit {
       }else{
         this.halvesValue = 0;
       }
+      const historyItem = `- połówka: ${type.controls.pizzaName.value}`;
+      this.addToHistory(historyItem)
       type.setValue({
         pizzaName: type.controls.pizzaName.value,
         pizzaQuantity: type.controls.pizzaQuantity.value-.5
@@ -167,21 +175,24 @@ export class StatFormComponent implements OnInit {
 
   singleClickPlus = (type)=>{
     if(type.controls.pizzaName){
-      console.log(type.controls.pizzaName.value);
+      const historyItem = `+ ${type.controls.pizzaName.value}`;
+      this.addToHistory(historyItem)
       type.setValue({
         pizzaName: type.controls.pizzaName.value,
         pizzaQuantity: type.controls.pizzaQuantity.value+1
       })
     }
     else if(type.controls.othersName){
-      console.log(type.controls.othersName.value)
+      const historyItem = `+ ${type.controls.othersName.value}`;
+      this.addToHistory(historyItem)
       type.setValue({
         othersName: type.controls.othersName.value,
         othersQuantity: type.controls.othersQuantity.value+1
       })
     }
     else{
-      console.log(type.controls.kitName.value)
+      const historyItem = `+ ${type.controls.kitName.value}`;
+      this.addToHistory(historyItem)
       type.setValue({
         kitName: type.controls.kitName.value,
         kitQuantity: type.controls.kitQuantity.value+1
@@ -191,6 +202,8 @@ export class StatFormComponent implements OnInit {
   singleClickMinus = (type)=>{
     if(type.controls.pizzaQuantity){
       if(type.controls.pizzaQuantity.value !== 0){
+        const historyItem = `- ${type.controls.pizzaName.value}`;
+        this.addToHistory(historyItem)
         type.setValue({
           pizzaName: type.controls.pizzaName.value,
           pizzaQuantity: type.controls.pizzaQuantity.value-1
@@ -199,6 +212,8 @@ export class StatFormComponent implements OnInit {
     }
     else if(type.controls.othersName){
       if(type.controls.othersQuantity.value !== 0){
+        const historyItem = `- ${type.controls.othersName.value}`;
+        this.addToHistory(historyItem)
         type.setValue({
           othersName: type.controls.othersName.value,
           othersQuantity: type.controls.othersQuantity.value-1
@@ -207,6 +222,8 @@ export class StatFormComponent implements OnInit {
     }
     else{
       if(type.controls.kitQuantity.value !== 0){
+        const historyItem = `- ${type.controls.kitName.value}`;
+        this.addToHistory(historyItem)
         type.setValue({
           kitName: type.controls.kitName.value,
           kitQuantity: type.controls.kitQuantity.value-1
@@ -235,4 +252,11 @@ export class StatFormComponent implements OnInit {
       }, 0);
  });
   };
+
+  addToHistory(item){
+    const historyWrapper = document.querySelector('#history-wrapper');
+    const historyItem = `<span class="history-item">${item}</span>`
+    historyWrapper.insertAdjacentHTML('beforeend', historyItem)
+    historyWrapper.scrollTo(0, historyWrapper.getBoundingClientRect().bottom)
+  }
 }
