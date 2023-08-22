@@ -1,135 +1,164 @@
-.pizza{
-  label{
-    font-size: 1.4rem;
-    // text-transform: uppercase;
-  }
-  .dataPicker{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    .wrapper{
-      display: flex;
-      align-items: center;
+app-stat-form{
+  .pizza{
+    label{
+      font-size: 1.4rem;
+      // text-transform: uppercase;
     }
-    p-calendar{
+    .dataPicker{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      .wrapper{
+        display: flex;
+        align-items: center;
+      }
+      p-calendar{
+        width: 150px;
+      }
+    }
+    .btn{
+      display: flex;
       width: 150px;
-    }
-  }
-  .btn{
-    display: flex;
-    width: 150px;
-    justify-content: center;
-    text-decoration: none;
-  }
-  .valueSum{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    span{
-      width: 100%;
-      display: flex;
-    }
-  }
-  h2{
-    width: 100%;
-    margin: 0;
-    display: none;
-  }
-  .pizzaArray {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 750px;
-    p-inputnumber {
-      width: calc(100% - 30px);
-      width: 80px;
-    }
-    &>div{
-      padding: 0 !important;
-    }
-  }
-  .kitsArray{
-    display: flex;
-    flex-wrap: wrap;
-    width: 25%;
-    height: 25px;
-    p-inputnumber {
-      width: calc(100% - 60px);
-      width: 60px;
-    }
-    &>div{
-      padding: 0 !important;
-    }
-  }
-  .pizza, .kits{
-    &_wrapper{
-      margin-right: 10px;
-      margin-left: 10px;
       justify-content: center;
-      align-items: center;
-      height: 60px;
-      position: relative;
-      width: 100%;
-      &:before{
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        right: 0px;
-        background: var(--gray-600);
+      text-decoration: none;
+    }
+    .valueSum{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      span{
+        width: 100%;
+        display: flex;
       }
     }
-    &_name{
-      width: 130px;
+    h2{
+      width: 100%;
+      margin: 0;
+      display: none;
     }
-    &_button {
+    .pizzaArray {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 5px;
-      &:before {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 750px;
+      p-inputnumber {
+        width: calc(100% - 30px);
+        width: 80px;
       }
-      &.single{
-        width: 50px;
-        height: 50px;
-        &_plus{
-          // background: black;
-          // border-color: black;
+      &>div{
+        padding: 0 !important;
+      }
+    }
+    .kitsArray{
+      display: flex;
+      flex-wrap: wrap;
+      width: 25%;
+      align-items: baseline;
+      align-content: baseline;
+      p-inputnumber {
+        width: calc(100% - 60px);
+        width: 60px;
+      }
+      &>div{
+        padding: 0 !important;
+        max-height: min-content;
+      }
+    }
+    .pizza, .kits{
+      &_wrapper{
+        margin-right: 10px;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        position: relative;
+        width: 100%;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          right: 0px;
+          background: var(--gray-600);
         }
       }
-      &.half{
-        width: 30px;
-        height: 30px;
+      &_name{
+        width: 130px;
       }
-
-      &_wrapper{
+      &_button {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        margin: 5px;
+        &:before {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        &.single{
+          width: 50px;
+          height: 50px;
+          &_plus{
+            // background: black;
+            // border-color: black;
+          }
+        }
+        &.half{
+          width: 30px;
+          height: 30px;
+        }
+
+        &_wrapper{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+        }
       }
     }
-  }
-  .kits_button{
-    &_wrapper{
-      width: 30%;
+    .kits_button{
+      &_wrapper{
+        width: 30%;
+      }
     }
-  }
-  .othersArray{
-    width: 25%;
-  }
-  .submitButton{
-    // background-color: gray;
-    position: fixed;
-    height: 50px;
-    width: 50%;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    .othersArray{
+      width: 25%;
+    }
+
+    #input-history{
+      position: absolute;
+      left: calc(50% + 20px);
+      bottom: 0;
+      border: 1px solid var(--gray-600);
+      width: 450px;
+      height: 300px;
+      padding: 15px;
+      h3{
+        margin: 0;
+      }
+      #history-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        max-height: calc(100% - 30px);
+        // flex-direction: column-reverse;
+        .history-item{
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+
+    .submitButton{
+      // background-color: gray;
+      position: fixed;
+      height: 50px;
+      width: 50%;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
   }
 }
