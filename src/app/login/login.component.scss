@@ -1,0 +1,19 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      margin: 1rem;
+    }
+    button{
+      margin-top: 1rem;
+    }
+  }
+}

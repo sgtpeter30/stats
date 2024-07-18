@@ -1,12 +1,15 @@
-<a pButton type="button" class="p-button-info" href="/">Wróć do formularza</a>
-<p-tabView>
+<a pButton type="button" class="p-button-info" 
+[routerLink]="['/statistics']">Wróć do formularza</a>
+<a pButton type="button" class="p-button-info" 
+[routerLink]="['/admin']">Sortowanie</a>
+<p-tabView [activeIndex]="2">
   <p-tabPanel header="Tabela">
     <app-stat-table [statistics]="statistics"></app-stat-table>
   </p-tabPanel>
   <p-tabPanel header="Wykres">
     <app-stat-bar [statistics]="statistics"></app-stat-bar>
   </p-tabPanel>
-  <p-tabPanel header="Header 3">
-    Content 3
+  <p-tabPanel header="Wykres rok do roku">
+    <app-year-to-year [statistics]="statistics"></app-year-to-year>
   </p-tabPanel>
 </p-tabView>

@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" name="pizzaForm" class="flex flex-wrap p-fluid">
+  <span class="p-float-label">
+    <input id="login" formControlName="login" type="text" pInputText>
+    <label for="login">Username</label>
+  </span>
+  <span class="p-float-label">
+    <input id="password" formControlName="password" type="password" pInputText>
+    <label for="password">Password</label>
+  </span>
+  <button pButton type="button" label="Submit" (click)="submitForm()" class="submitButton"></button>
+</form>

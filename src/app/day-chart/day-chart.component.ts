@@ -8,7 +8,7 @@ import { pizzaList } from "../../assets/pizzaList";
   styleUrls: ['./day-chart.component.scss']
 })
 export class DayChartComponent implements OnInit {
-  @Input() data: StatsModel;
+  @Input() data!: StatsModel;
   chartData:{} = {};
   kitsData: {} = {};
   config: {} = {};

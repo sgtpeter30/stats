@@ -13,6 +13,7 @@ export class StatisticsResolverService implements Resolve<any> {
   ) { }
 
   resolve(route: ActivatedRouteSnapshot, rstate: RouterStateSnapshot): Observable<any> {
-    return this.http.get('http://localhost:3500/stats')
+    // return this.http.get('http://localhost:3500/stats')
+    return this.http.get('api/stats')
   }
 }

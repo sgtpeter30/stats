@@ -3,9 +3,9 @@
     <div class="dataPicker col-12">
       <div class="wrapper">
         <label>DATA: </label>
-        <p-calendar class="col-12" formControlName="date" dateFormat="dd.mm" dataType="string" firstDayOfWeek="1" (onSelect)="pickedDate(pizzaForm.controls['date'].value)"></p-calendar>
+        <p-calendar class="col-12" formControlName="date" dateFormat="dd.mm.yy" dataType="string" firstDayOfWeek="1"></p-calendar>
       </div>
-      <a href="dashboards" class="btn p-button">STATYSTYKI</a>
+      <a [routerLink]="['/dashboards']" class="btn p-button">STATYSTYKI</a>
       <div class="valueSum">
         <span class="pizzaSum">Suma pizz: {{pizzaSum}}</span>
         <span class="kitSum">Suma zestawów: {{kitSum}}</span>
@@ -13,7 +13,7 @@
     </div>
     <h2>Pizze: </h2>
     <div class="pizzaArray col-6" formArrayName="pizzaArray" >
-      <div class="flex flex-wrap" *ngFor="let type of pizzaForm.get('pizzaArray')['controls']; let i=index">
+      <div class="flex flex-wrap" *ngFor="let type of pizzaForm.get('pizzaArray')!['controls']; let i=index">
         <div class="p-field flex pizza_wrapper" [formGroupName]="i">
           <label class="pizza_name" for="horizontal">{{type.controls.pizzaName.value}}</label>
 
@@ -36,7 +36,7 @@
       <h2>Zestawy</h2>
     </div> -->
     <div formArrayName="kitsArray" class="kitsArray" >
-      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('kitsArray')['controls']; let i=index">
+      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('kitsArray')!['controls']; let i=index">
         <div class="p-field flex kits_wrapper" [formGroupName]="i">
           <label class="kits_name" for="horizontal">{{type.controls.kitName.value}}</label>
 
@@ -57,7 +57,7 @@
       <h2>Dodatkowe</h2>
     </div> -->
     <div formArrayName="othersArray" class="othersArray kitsArray" >
-      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('othersArray')['controls']; let i=index">
+      <div class="flex flex-wrap col-12" *ngFor="let type of pizzaForm.get('othersArray')!['controls']; let i=index">
         <div class="p-field flex others_wrapper kits_wrapper" [formGroupName]="i">
           <label class="others_name kits_name" for="horizontal">{{type.controls.othersName.value}}</label>
 
@@ -76,7 +76,7 @@
 
     <div id="input-history">
       <h3>Dodane rzeczy:</h3>
-      <div id="history-wrapper"></div>
+      <div id="history-wrapper" #historyWrapper></div>
     </div>
 
     <button pButton type="button" label="Submit" (click)="submitForm()" class="submitButton"></button>

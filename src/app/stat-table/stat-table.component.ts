@@ -8,7 +8,7 @@ import { StatsModel } from '../models/stats-model';
 })
 export class StatTableComponent implements OnInit {
 
-  @Input() statistics: StatsModel;
+  @Input() statistics!: StatsModel;
 
   constructor() { }
 

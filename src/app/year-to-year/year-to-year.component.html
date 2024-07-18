@@ -1,0 +1,18 @@
+
+<div>
+  <p-accordion [multiple]="true" [activeIndex]="1">
+    <p-accordionTab header="Pizza" [selected]="true">
+      <p-chart type="line" [data]="pizzaData" ></p-chart>
+    </p-accordionTab>
+    <p-accordionTab header="Zestawy">
+      <p-chart type="line" [data]="othersData"></p-chart>
+    </p-accordionTab>
+
+    <p-accordionTab header="Pizza/rok">
+      <p-chart type="line" [data]="pizzaByYears"></p-chart>
+    </p-accordionTab>
+    <p-accordionTab header="Pizza z podziałem na rodzaje">
+      <p-chart type="bar" [data]="pizzaByType"></p-chart>
+    </p-accordionTab>
+  </p-accordion>
+</div>

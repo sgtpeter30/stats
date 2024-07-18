@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { pizzaList, kitsList, otherList } from "../../assets/pizzaList";
 import { HttpClient } from '@angular/common/http';
-import { dialogflow } from 'googleapis/build/src/apis/dialogflow';
+import { StandardResponse } from '../models/standard-response-model';
+import { MessageService } from 'primeng/api';
 
 
 @Component({
@@ -12,13 +13,14 @@ import { dialogflow } from 'googleapis/build/src/apis/dialogflow';
   encapsulation: ViewEncapsulation.None,
 })
 export class StatFormComponent implements OnInit {
+  @ViewChild('historyWrapper') historyWrapper!: ElementRef
 
   pizzaBaseData = pizzaList;
   pizzaSum: number = 0;
   kitSum: number = 0;
   others: number = 0;
 
-  currentBase = {};
+  // currentBase = {};
 
 
   pizzaForm!: FormGroup;
@@ -26,10 +28,11 @@ export class StatFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private messageService: MessageService
   ) {
-    const preparedPizzas = [];
-    const preparedKits = [];
-    const preparedOthers = [];
+    const preparedPizzas: any[] = [];
+    const preparedKits: any[] = [];
+    const preparedOthers: any[] = [];
 
     this.pizzaBaseData.forEach(element => {
       preparedPizzas.push(
@@ -70,23 +73,22 @@ export class StatFormComponent implements OnInit {
   // submit
   submitForm = ()=>{
     if (this.pizzaForm.valid) {
-      const formValue = {
-        // zmienić potem na faktyczny rok wybrany z daty!
-        year: 2023,
-        value: [...this.currentBase as any, this.pizzaForm.value]
+      const formValue = this.pizzaForm.value
+      const date = formValue.date.split('.');
+      formValue.date = `${date[0]}.${date[1]}`
+      const body ={
+        year: date[2],
+        value: formValue
       }
-      // let sendData = this.http.post('http://localhost:3500/stats?year=2023', formValue);
-      // sendData.subscribe(response =>{
-      //   console.log(response);
-      // });
+      console.log(formValue)
+      console.log(body)
 
-      this.http.put('http://localhost:3500/stats/2023', formValue).subscribe({
+      this.http.post('api/stats/addDay', body).subscribe({
         next: (response) => {
-          alert('Wysłano')
-
-        }, error: (err) => {
+          this.messageService.add({severity:'success', summary: 'Success', detail: 'Dodano dzień!'});
+        }, error: (err: StandardResponse) => {
           console.log(err)
-          alert(err.message)
+          this.messageService.add({severity:'error', summary: 'Error', detail: err.message});
         }
       });
 
@@ -95,28 +97,7 @@ export class StatFormComponent implements OnInit {
     }
 
   };
-  // file
-  pickedDate = async (date)=>{
-    // loadFile();
-  }
-  // spredsheet
-  // pickedDate = async (date)=>{
-  //   const response = await fetch(`http://localhost:1337/pizza/${date}`);
-  //   const filledForm = await response.json();
-  //   if(filledForm.valueRanges[0].values){
-  //     this.pizzaForm.get('pizzaArray')['controls'] = []
-  //     filledForm.valueRanges[0].values.forEach(value => {
-  //       let pizzaName = value[0];
-  //       let pizzaQuantity = value[1];
-  //       this.pizzaForm.get('pizzaArray')['controls'].push(
-  //         this.fb.group({
-  //           pizzaName: this.fb.control(pizzaName),
-  //           pizzaQuantity: this.fb.control(pizzaQuantity),
-  //         })
-  //       );
-  //     });
-  //   }
-  // }
+
   halvesValue = 0;
   halfPizza = {
     firstHalf: '',
@@ -141,14 +122,10 @@ export class StatFormComponent implements OnInit {
         this.pizzaForm.controls['halvesQuantity'].setValue(this.pizzaForm.value.halvesQuantity + 1);
         this.halfPizza.secondHalf = type.controls.pizzaName.value;
         // this.pizzaForm.value.halves.push(this.fb.group(this.halfPizza));
-        this.pizzaForm.get('halves')["push"](this.fb.group(this.halfPizza));
+        this.pizzaForm.get('halves')!["push"](this.fb.group(this.halfPizza));
         break;
     }
 
-    // if(this.halvesValue === 2){
-    //   this.halvesValue = 0;
-    //   this.pizzaForm.value.halvesQuantity = this.pizzaForm.value.halvesQuantity + 1;
-    // }
     console.log(this.pizzaForm.value);
     type.setValue({
       pizzaName: type.controls.pizzaName.value,
@@ -159,7 +136,7 @@ export class StatFormComponent implements OnInit {
     if(type.controls.pizzaQuantity.value !== 0){
       if(this.halvesValue === 0){
         this.halvesValue = 1;
-        this.pizzaForm.get('halves')["removeAt"](this.pizzaForm.controls['halves'].value.length);
+        this.pizzaForm.get('halves')!["removeAt"](this.pizzaForm.controls['halves'].value.length);
         this.pizzaForm.controls['halvesQuantity'].setValue(this.pizzaForm.value.halvesQuantity - 1);
       }else{
         this.halvesValue = 0;
@@ -232,14 +209,6 @@ export class StatFormComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    // console.log("pizzaList");
-    // console.log(pizzaList);
-
-    this.http.get('http://localhost:3500/stats/2023').subscribe((res: any)=> {
-      this.currentBase = res.value
-      console.log(res)
-    });
-
     this.pizzaForm.valueChanges.subscribe(value => {
       this.pizzaSum = value.pizzaArray.reduce((accumulator, object) => {
         return accumulator + object.pizzaQuantity;
@@ -254,7 +223,7 @@ export class StatFormComponent implements OnInit {
   };
 
   addToHistory(item){
-    const historyWrapper = document.querySelector('#history-wrapper');
+    const historyWrapper = this.historyWrapper?.nativeElement;
     const historyItem = `<span class="history-item">${item}</span>`
     historyWrapper.insertAdjacentHTML('beforeend', historyItem)
     historyWrapper.scrollTo(0, historyWrapper.getBoundingClientRect().bottom)

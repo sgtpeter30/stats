@@ -36,7 +36,7 @@ export class DashboardsComponent implements OnInit {
             element.othersSum = element?.othersArray?.reduce((accumulator, object) => {
               return accumulator + object.othersQuantity;
             }, 0);
-            element.boxNumber = element?.othersArray?.find(element => element.othersName === "Pudełko do pizzy").othersQuantity
+            element.boxNumber = element?.othersArray?.find(element => element.othersName === "Pudełko do pizzy")?.othersQuantity
           }
         })
       });
