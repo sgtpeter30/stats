@@ -13,7 +13,7 @@
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-data let-expanded="expanded">
-          <tr class="{{data.id}}">
+          <tr>
             <td>{{data.date}}</td>
             <td>{{data.pizzaSum}}</td>
             <td>{{data.kitSum}}</td>
@@ -26,8 +26,10 @@
 
         </ng-template>
         <ng-template pTemplate="rowexpansion" let-data>
-          <tr class="{{data.id}}">
-            <app-day-chart [data]="data" style="width: 100%;"></app-day-chart>
+          <tr>
+            <td>
+              <app-day-chart [data]="data" style="width: 100%;"></app-day-chart>
+            </td>
           </tr>
         </ng-template>
       </p-table>

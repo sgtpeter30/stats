@@ -147,39 +147,48 @@ export const pizzaList = [
 export const kitsList = [
   {
     name: "Zestaw nuggetsy",
-    value: 0
+    value: 0,
+    color: '#EC407A',
   },
   {
     name: "Zestaw streepsy",
-    value: 0
+    value: 0,
+    color: '#AB47BC',
   },
   {
     name: "Zestaw kotlet",
-    value: 0
+    value: 0,
+    color: '#42A5F5',
   },
   {
     name: "nuggetsy",
-    value: 0
+    value: 0,
+    color: '#7E57C2',
   },
   {
     name: "streepsy",
-    value: 0
+    value: 0,
+    color: '#66BB6A',
   },
   {
     name: "frytki",
-    value: 0
+    value: 0,
+    color: '#FFCA28',
   },
   {
     name: "Hot dog",
-    value: 0
+    value: 0,
+    color: '#26A69A'
   },
   {
     name: "Hot dog francuski",
-    value: 0
+    value: 0,
+    color: "#Cc6633",
   },
   {
     name: "Hamburger",
-    value: 0
+    value: 0,
+    color: "#cc9933",
   },
 ]
 

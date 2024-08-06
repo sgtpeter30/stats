@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StatsModel } from '../models/stats-model';
-import { BarChartModel, LineChartDatasetModel, LineChartModel } from '../models/primeng-chart-models';
+import { BarChartDatasetModel, BarChartModel, LineChartDatasetModel, LineChartModel, PointStyle } from '../models/primeng-chart-models';
+import { Chart, ChartData, ChartDataset } from 'chart.js';
 import { pizzaList } from 'src/assets/pizzaList';
 
 @Component({
@@ -13,17 +14,16 @@ export class YearToYearComponent implements OnInit {
 
   uniqueDates: string[] = [];
   
-  pizzaData!: LineChartModel;
-  othersData!: LineChartModel;
-  pizzaByYears!: LineChartModel;
-  pizzaByType!: BarChartModel;
+  pizzaData!: ChartData<'line'>;
+  othersData!: ChartData<'line'>;
+  pizzaByYears!: ChartData<'bar'>;
+  pizzaByType!: ChartData<'bar'>;
   
 
   constructor() { }
 
   ngOnInit(): void {
     this.uniqueDates = this.getUniqueDates()
-    console.log(this.statistics)
     this.createPizzaDataset();
     this.createOthersDataset();
     this.createPizzaByYearsDataset();
@@ -46,7 +46,7 @@ export class YearToYearComponent implements OnInit {
   }
 
   private createPizzaDataset(){
-    const datasets: any[] = [];
+    const datasets: LineChartDatasetModel[] = [];
     for (const stats of this.statistics) {
       const data: number[] = [];
       for (const dates of this.uniqueDates) {
@@ -54,14 +54,17 @@ export class YearToYearComponent implements OnInit {
         const value = sameDateItem ? sameDateItem?.pizzaSum : 0
         data.push(value)
       }
-      const singleDataset = {
+      const singleDataset:LineChartDatasetModel = {
         label: stats.year,
         data: data,
         fill: false,
-        tension: .4
+        tension: .4,
+        pointRadius: 10,
       }
       datasets.push(singleDataset)
     }
+    datasets[0].pointStyle = 'triangle';
+
     datasets[0].borderColor = '#42A5F5';
     datasets[1].borderColor = '#FFA726';
     datasets[2].borderColor = '#ff3a26';
@@ -83,11 +86,15 @@ export class YearToYearComponent implements OnInit {
       const singleDataset: LineChartDatasetModel = {
         label: stats.year,
         data: data,
+        pointStyle: PointStyle.triangle,
         fill: false,
-        tension: .4
+        tension: .4,
+        pointRadius: 10,
       }
       datasets.push(singleDataset)
     }
+
+    
 
     datasets[0].borderColor = '#42A5F5';
     datasets[1].borderColor = '#FFA726';
@@ -100,35 +107,33 @@ export class YearToYearComponent implements OnInit {
   }
 
   private createPizzaByYearsDataset(){
-    const datasets: LineChartDatasetModel[] = [];
+    const datasets: ChartDataset<"bar", number[]>[] = [];
     for (const statistic of this.statistics) {
       const daysArray = statistic.value
-      console.log(statistic.year)
       const allYearPizzasArray = daysArray.flatMap(day => day.pizzaArray)
       const data: number[] = [];
       for (const pizza of pizzaList) {
         const pizzaTypeQuantity = allYearPizzasArray.filter(item => item.pizzaName === pizza.name).reduce((number, item)=> number + item.pizzaQuantity, 0)
-        console.log(pizzaTypeQuantity);
         data.push(pizzaTypeQuantity)
       }
-      const singleDataset: LineChartDatasetModel = {
+      const singleDataset: ChartDataset<"bar", number[]> = {
         label: statistic.year,
         data: data,
-        fill: false,
-        tension: .4,
       }      
       datasets.push(singleDataset)
     }
-    datasets[0].borderColor = '#42A5F5';
-    datasets[1].borderColor = '#FFA726';
-    datasets[2].borderColor = '#ff3a26';
+    datasets[0].backgroundColor = '#42A5F5';
+    datasets[1].backgroundColor = '#FFA726';
+    datasets[2].backgroundColor = '#ff3a26';
     const pizzasNames = pizzaList.map(pizza=> pizza.name)
     this.pizzaByYears = {
       labels: pizzasNames,
-      datasets: datasets
+      datasets: datasets,
     }
 
   }
-  private createPizzaByTypeDataset(){}
+  private createPizzaByTypeDataset(){
+
+  }
 
 }

@@ -1,7 +1,7 @@
-<div class="card" *ngFor="let barData of barList; let i = index">
+<div class="card" *ngFor="let item of statistics; let i = index">
   <p-accordion [multiple]="true">
-    <p-accordionTab [header]="statistics[i].year">
-      <p-chart type="bar" [data]="barData" ></p-chart>
+    <p-accordionTab [header]="item.year">
+      <app-year-stats [data]="item"></app-year-stats>
     </p-accordionTab>
   </p-accordion>
 </div>

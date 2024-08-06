@@ -7,24 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './dashboards.component.html',
   styleUrls: ['./dashboards.component.scss']
 })
-export class DashboardsComponent implements OnInit {
-
-  // data: [];
+export class DashboardsComponent {
   statistics: any;
-
-
   constructor(
-    private http: HttpClient,
     private act: ActivatedRoute
   ) {
     this.act.data.subscribe(res => {
-      console.log(res);
-      console.log(res['statistics']);
       this.statistics = res['statistics'];
       this.statistics.forEach(year =>{
-        console.log("year");
-        console.log(year);
-
         year.value.forEach(element => {
           if (element.pizzaArray) {
             element.pizzaSum = element.pizzaArray.reduce((accumulator, object) => {
@@ -43,9 +33,4 @@ export class DashboardsComponent implements OnInit {
 
     });
   }
-
-  ngOnInit(): void {
-
-  }
-
 }

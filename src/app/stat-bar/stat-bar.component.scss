@@ -1,0 +1,14 @@
+app-stat-bar{
+  .p-accordion-content{
+    position: relative;
+  }
+  .toggle-button{
+    margin-left: auto;
+    position: absolute;
+    right: 1rem;
+    z-index: 100;
+  }
+  [data-visible = "false"]{
+    display: none;
+  }
+}

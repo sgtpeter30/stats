@@ -1,0 +1,9 @@
+<p-toggleButton class="toggle-button" onLabel="Bez podziału" offLabel="Z podziałem" (onChange)="buttonChange()" />
+<div class="pizza-stats">
+  <p-chart [hidden]="!hideStacked" type="bar" height="600px" [data]="pizzaBarData" [options]="stackedOptions"></p-chart>
+  <p-chart [hidden]="hideStacked" type="bar" height="600px" [data]="pizzaBarDataStacked" [options]="stackedOptions"></p-chart>
+</div>
+<div class="kits-stats">
+  <p-chart [hidden]="!hideStacked" type="bar" height="600px" [data]="kitsBarData" [options]="stackedOptions"></p-chart>
+  <p-chart [hidden]="hideStacked" type="bar" height="600px" [data]="kitsBarDataStacked" [options]="stackedOptions"></p-chart>
+</div>

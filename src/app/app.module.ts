@@ -14,6 +14,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { InputTextModule } from 'primeng/inputtext';
 import { AccordionModule } from 'primeng/accordion';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 import { AppComponent } from './app.component';
 import { StatFormComponent } from './stat-form/stat-form.component';
@@ -26,9 +27,11 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { MessageService } from 'primeng/api';
 import { AdminComponent } from './admin/admin.component';
 import { YearToYearComponent } from './year-to-year/year-to-year.component';
+import { YearStatsComponent } from "./stat-bar/year-stats/year-stats.component";
 
 export const environment = {
-  apiUrl: "http://localhost:3000"
+  // apiUrl: "http://localhost:3000"
+  apiUrl: ""
 };
 
 @NgModule({
@@ -56,10 +59,12 @@ export const environment = {
     TabViewModule,
     ToastModule,
     InputTextModule,
+    ToggleButtonModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-  ],
+    YearStatsComponent
+],
   providers: [
     MessageService,
     { provide: "BASE_API_URL", useValue: environment.apiUrl },
